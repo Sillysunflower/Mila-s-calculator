@@ -1,0 +1,119 @@
+/* Configuración General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffd6e0;
+    /* Fondo con patrón retro de cuadrícula/estrellas */
+    background-image: 
+        radial-gradient(#ffb7c5 2px, transparent 2px), 
+        radial-gradient(#ffb7c5 2px, #ffd6e0 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Fredoka One', cursive, sans-serif;
+}
+
+/* Cuerpo de la Calculadora (Estilo Tamagotchi/Gadget) */
+#calculator {
+    background: linear-gradient(145deg, #ffeef2, #f3c4fb);
+    width: 320px;
+    padding: 25px;
+    border-radius: 35px;
+    /* Bordes gruesos estilo plástico vintage */
+    border: 5px solid #ffb3c6;
+    box-shadow: 
+        8px 8px 0px #b5838d,
+        inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* Títulos y Header */
+.cute-title {
+    display: block;
+    font-size: 1.1rem;
+    color: #ff4d6d;
+    text-shadow: 1px 1px 0px #ffffff;
+}
+
+.sub-title {
+    display: block;
+    font-size: 0.75rem;
+    color: #8e94f2;
+    margin-bottom: 12px;
+}
+
+/* Pantalla LCD Retro */
+#display {
+    width: 100%;
+    height: 55px;
+    background-color: #e2f0d9; /* Verde LCD clásico o cámbialo a #fff0f5 para rosa */
+    border: 3px inset #b5e2fa;
+    border-radius: 12px;
+    font-family: 'VT323', monospace; /* Fuente estilo pixel/LCD */
+    font-size: 2.2rem;
+    color: #2b2d42;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Grid de Botones */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Estilo de Botones Kawaii */
+button {
+    height: 50px;
+    border: none;
+    border-radius: 18px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #590d22;
+    /* Efecto Botón 3D / Burbuja Y2K */
+    box-shadow: 0px 4px 0px #ffb3c6;
+    transition: all 0.1s ease;
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px #ffb3c6;
+}
+
+/* Botones de Operación (+, -, *, /) */
+button.operator {
+    background-color: #e7c6ff;
+    color: #4a1259;
+    box-shadow: 0px 4px 0px #c8b6ff;
+}
+
+/* Botones Especiales (AC, DEL) */
+button.func {
+    background-color: #ffc6ff;
+    font-size: 1rem;
+}
+
+/* Botón Igual (=) */
+button.equal {
+    background-color: #ffadad;
+    color: #ffffff;
+    box-shadow: 0px 4px 0px #ff6b6b;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 0.7rem;
+    color: #b5838d;
+}
